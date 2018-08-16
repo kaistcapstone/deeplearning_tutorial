@@ -114,6 +114,10 @@ docker system prune
 12. Enter jetson's IP address and follow the instructions
 
 ### Jetson Pytorch Setup
+0. Operate fan
+```
+sudo /home/nvidia/^Ctson_clocks.sh
+```
 1. Install pip3
 ```
 sudo apt-get update && sudo apt-get upgrade
@@ -144,3 +148,11 @@ print(torch.cuda.is_available())
 ```
 
 Reference: https://gist.github.com/dusty-nv/ef2b372301c00c0a9d3203e42fd83426
+
+6. Install opencv
+```
+git clone https://github.com/jetsonhacks/buildOpenCVTX2
+cd buildOpenCVTX2/
+ ./buildOpenCV.sh -s
+ ```
+
