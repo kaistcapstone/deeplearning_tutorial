@@ -146,13 +146,39 @@ import torch
 print(torch.__version__)
 print(torch.cuda.is_available())
 ```
+1. Insstall pytorch
+```
+ git clone --recursive https://github.com/pytorch/pytorch
+ cd pytorch
+ python3 setup.py install
+```
+2. Verify CUDA and pytorch(from python3 interactive terminal)
+```
+python3
+import torch
+print(torch.__version__)
+print(torch.cuda.is_available())
+```
+result :  True
 
 Reference: https://gist.github.com/dusty-nv/ef2b372301c00c0a9d3203e42fd83426
 
-6. Install opencv
+6. Install opencv(it will take 1.5hour)
 ```
 git clone https://github.com/jetsonhacks/buildOpenCVTX2
 cd buildOpenCVTX2/
  ./buildOpenCV.sh -s
  ```
-
+ 
+ 7. Install ROS
+ 
+ follow webpage : http://wiki.ros.org/kinetic/Installation/Ubuntu
+ ```
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 
+sudo apt-get update
+sudo apt-get install ros-kinetic-desktop
+sudo rosdep init
+rosdep update
+echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
