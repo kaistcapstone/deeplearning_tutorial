@@ -114,6 +114,7 @@ docker system prune
 12. Enter jetson's IP address and follow the instructions
 
 ### Jetson Pytorch Setup
+
 0. Operate fan
 ```
 sudo /home/nvidia/^Ctson_clocks.sh
@@ -124,7 +125,7 @@ sudo /home/nvidia/^Ctson_clocks.sh
  cd pytorch
  python3 setup.py install
 ```
-never mind denied error, it will work on next step
+    never mind denied error, it will work on next step
 
 2. build pytorch
 
@@ -139,9 +140,9 @@ import torch
 print(torch.__version__)
 print(torch.cuda.is_available())
 ```
-result :  True
+    result :  True
 
-Reference: https://gist.github.com/dusty-nv/ef2b372301c00c0a9d3203e42fd83426
+    Reference: https://gist.github.com/dusty-nv/ef2b372301c00c0a9d3203e42fd83426
 
 4. Install opencv(it will take 1.5hour)
 ```
@@ -155,12 +156,12 @@ python3
 import cv2
 cv2.__version__
 ```
-result :'3.4.1-dev'
+    result :'3.4.1-dev'
  
  
  6. Install ROS
  
- follow webpage : http://wiki.ros.org/kinetic/Installation/Ubuntu
+    follow webpage : http://wiki.ros.org/kinetic/Installation/Ubuntu
  ```
 sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116 
