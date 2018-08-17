@@ -118,41 +118,21 @@ docker system prune
 ```
 sudo /home/nvidia/^Ctson_clocks.sh
 ```
-1. Install pip3
-```
-sudo apt-get update && sudo apt-get upgrade
-sudo apt-get install python3-pip
-pip3 install -U pip3
-```
-2. clone pyTorch repo
-```
-git clone http://github.com/pytorch/pytorch
-cd pytorch
-git submodule update --init
-```
-3. install prereqs
-```
-sudo pip3 install -U setuptools
-sudo pip3 install -r requirements.txt
-```
-4. Develop Mode:
-```
-python3 setup.py build_deps
-sudo python3 setup.py develop
-```
-5. Verify CUDA (from python3 interactive terminal)
-```
-import torch
-print(torch.__version__)
-print(torch.cuda.is_available())
-```
-1. Insstall pytorch
+1. Insstall pytorch(will take 2hour)
 ```
  git clone --recursive https://github.com/pytorch/pytorch
  cd pytorch
  python3 setup.py install
 ```
-2. Verify CUDA and pytorch(from python3 interactive terminal)
+never mind denied error, it will work on next step
+
+2. build pytorch
+
+```
+python3 setup.py build_deps
+sudo python3 setup.py develop
+```
+3. Verify CUDA and pytorch(from python3 interactive terminal)
 ```
 python3
 import torch
@@ -163,14 +143,22 @@ result :  True
 
 Reference: https://gist.github.com/dusty-nv/ef2b372301c00c0a9d3203e42fd83426
 
-6. Install opencv(it will take 1.5hour)
+4. Install opencv(it will take 1.5hour)
 ```
 git clone https://github.com/jetsonhacks/buildOpenCVTX2
 cd buildOpenCVTX2/
  ./buildOpenCV.sh -s
  ```
+ 5. Verify opencv
+```
+python3
+import cv2
+cv2.__version__
+```
+result :'3.4.1-dev'
  
- 7. Install ROS
+ 
+ 6. Install ROS
  
  follow webpage : http://wiki.ros.org/kinetic/Installation/Ubuntu
  ```
@@ -181,4 +169,8 @@ sudo apt-get install ros-kinetic-desktop
 sudo rosdep init
 rosdep update
 echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+```
+ 7. Verify ROS
+```
+roscore
 ```
