@@ -3,13 +3,11 @@
 ## Syllabus
 1. Machine Learning Basic
 2. Neural Network & Training Techniques
-3. Convlutional Neural Network & Recurrent Neural Network
-4. Detection & Segmentation ( Yolo2 )
-5. Reinforcement Learning ( DQN & gym )
-6. Reinforcement Learning ( A3C )
-7. Generative Model ( Auto-encoder & GAN & DCGAN )
-8. Jetson TX2 setup & Test TensorRT
-9. Paper Review
+3. Convlutional Neural Network
+3. Transfer Learnig (CNN)
+4. Recurrent Neural Network
+5. Reinforcement Learning (DQN)
+
 
 ## Docker Setup
 ### Docker on Ubuntu with CPU
