@@ -115,7 +115,7 @@ docker system prune
 
 0. Operate fan
 ```
-sudo /home/nvidia/^Ctson_clocks.sh
+sudo /home/nvidia/jetson_clocks.sh
 ```
 1. Insstall pytorch(will take 2hour)
 ```
